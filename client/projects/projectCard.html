@@ -1,0 +1,16 @@
+<Template name="projectCard">
+  <div>
+    <p><b>Name:</b> {{name}} </p>
+    <p><b>Description:</b> {{desc}}</p>
+    <ul>
+    {{#each pins}}
+      <li><b>Pin #{{id}}:</b></li>
+        {{#if name}}
+          <p><b>Name:</b> {{name}}</p>
+        {{/if}}
+          <p><b>Lat: </b> {{lat}}</p>
+          <p><b>Longitude:</b> {{long}}</p>
+  {{/each}}
+</ul>
+  </div>
+</template>
