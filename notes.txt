@@ -1,0 +1,11 @@
+this is personal notes:
+
+*no user accounts needed for app, people can just connect to tour.
+*there should be a free mode where people can view all the pins from all projects in their area
+    *they can filter out what they don't like
+
+colors:
+Dark blue #02056C -> borders
+Blue #0307B2 -> important headers
+Yellow #FFBC00 -> buttons
+black/white for text 

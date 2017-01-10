@@ -1,8 +1,8 @@
 <Template name="Dashboard">
   <h1>My Projects</h1>
-  <ul>
+  <ul class="projectList">
     {{#each project}}
-      <li>{{> projectCard}}</li>
+      <li><a href="" style="text-decoration:none;">{{> projectCard}}</a></li>
     {{/each}}
   </ul>
 </Template>
