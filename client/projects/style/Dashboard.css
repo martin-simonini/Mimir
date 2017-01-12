@@ -1,6 +1,19 @@
 body{
   background-color: #dedede;
 }
+.newProject{
+  float: right;
+  width: 150px;
+  height: 65px;
+  margin-right: 50px;
+  font-size: 20px;
+}
+.newProject >a{
+  text-decoration: none;
+}
+.newProject:hover{
+  box-shadow: 0 0 5px grey;
+}
 
 ul{
   list-style: none;

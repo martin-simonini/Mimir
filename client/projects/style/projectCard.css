@@ -3,7 +3,10 @@
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 3px 3px 0 grey;
+}
+.main:hover{
+  box-shadow: 0 0 30px grey;
 }
 
 .name{
