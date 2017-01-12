@@ -8,4 +8,6 @@ colors:
 Dark blue #02056C -> borders
 Blue #0307B2 -> important headers
 Yellow #FFBC00 -> buttons
-black/white for text 
+black/white for text
+
+login tutorial: http://meteortips.com/second-meteor-tutorial/user-accounts/
