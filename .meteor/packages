@@ -38,4 +38,5 @@ meteortoys:allthings          #Insanely Handy Development Tools
 datariot:ganalytics           #Publish pageviews and events to Google Analytics using the new analytics.js code.
 check                         #Check whether a value matches a pattern
 cfs:standard-packages         #Filesystem for Meteor, collectionFS
-cfs:gridfs
+cfs:gridfs                    #GridFS storage adapter for CollectionFS
+dburles:google-maps           #Google Maps Javascript API v3
