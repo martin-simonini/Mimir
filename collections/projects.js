@@ -33,18 +33,17 @@ Projects.allow({
 });
 
 pinsSchema = new SimpleSchema({
-  id: {
-    type: Number,
-  },
   name: {
     type: String,
     optional: true,
   },
   lat: {
     type: Number,
+    decimal: true,
   },
   long: {
     type: Number,
+    decimal: true,
   }
 });
 
@@ -62,6 +61,16 @@ ProjectSchema = new SimpleSchema({
   pins: {
     type: [pinsSchema],
     label: "Pins"
+  },
+  createdBy: {
+    type: String,
+    label: "author",
+    autoValue: function(){
+      return Meteor.userId();
+    },
+    autoform: {
+      type: 'hidden',
+    }
   },
   createdAt: {
     type: Date,

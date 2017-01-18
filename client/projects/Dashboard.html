@@ -3,7 +3,7 @@
   <button class="newProject btn-primary"><a href="/newProject">New Project</a></button>
   <ul class="projectList">
     {{#each project}}
-      <li><a href="" style="text-decoration:none;">{{> projectCard}}</a></li>
+      <li><a href="/project/{{_id}}" style="text-decoration:none;">{{> projectCard}}</a></li>
     {{/each}}
   </ul>
 </Template>
