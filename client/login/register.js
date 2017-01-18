@@ -9,5 +9,6 @@ Template.register.events({
       email: email,
       password: password
     });
+    Router.go("MainLayout",{main: "dashboard"});
   }
 });

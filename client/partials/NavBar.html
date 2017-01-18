@@ -6,6 +6,8 @@
 -->
   <div class="navbar_main">
     <a href="/dashboard" class="mimir_link">Mimir</a>
-
+    {{#if currentUser}}
+      <a href="#" class="logout">Logout</a>
+    {{/if}}
   </div>
 </Template>
