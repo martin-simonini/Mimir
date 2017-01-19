@@ -28,25 +28,9 @@ Projects = new Mongo.Collection('project');
 
 Projects.allow({
   insert: function(userId, doc){
-    return !!true; //change to "!!userId" when currentUser implemented
+    return !!userId;
   }
 });
-
-pinsSchema = new SimpleSchema({
-  name: {
-    type: String,
-    optional: true,
-  },
-  lat: {
-    type: Number,
-    decimal: true,
-  },
-  long: {
-    type: Number,
-    decimal: true,
-  }
-});
-
 
 ProjectSchema = new SimpleSchema({
   name: {
@@ -58,10 +42,6 @@ ProjectSchema = new SimpleSchema({
     label: "Description"
   },
 
-  pins: {
-    type: [pinsSchema],
-    label: "Pins"
-  },
   createdBy: {
     type: String,
     label: "author",

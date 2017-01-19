@@ -40,3 +40,4 @@ check                         #Check whether a value matches a pattern
 cfs:standard-packages         #Filesystem for Meteor, collectionFS
 cfs:gridfs                    #GridFS storage adapter for CollectionFS
 dburles:google-maps           #Google Maps Javascript API v3
+mdg:geolocation               #Provides reactive geolocation on desktop and mobile.

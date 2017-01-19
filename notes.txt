@@ -11,3 +11,5 @@ Yellow #FFBC00 -> buttons
 black/white for text
 
 login tutorial: http://meteortips.com/second-meteor-tutorial/user-accounts/
+
+Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU
