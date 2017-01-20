@@ -1,10 +1,42 @@
 <template name="map">
+<div class="container-fluid parent_container">
   <div class="map-container">
     {{#unless geolocationError}}
       {{> googleMap name="map" options=mapOptions}}
     {{else}}
       Geolocation failed: {{geolocationError}}
     {{/unless}}
-    <button class="addPinButton btn btn-primary">Add Pin</button>
   </div>
+  <div class="pin_editor">
+    <div class="header">
+      <h4>Pins</h4>
+      <button class="addPinButton btn btn-primary">Add Pin</button>
+    </div>
+    <div class="pin_body">
+      <ul>
+      {{#each pins}}
+      <li><a href="#">{{pins.name}}</a></li>
+      {{/each}}
+    </ul>
+    </div>
+  </div>
+
+  <div class="pin_create hidden">
+    <div class="header">
+      <h4>New pin</h4>
+      <button class="cancelNewPinButton btn btn-primary">Cancel</button>
+    </div>
+    <div class="new_pin_body">
+      {{#autoForm collection="Pins" id="insertPinsForm" type="insert"}}
+      <fieldset>
+        {{> afQuickField name="name"}}
+        {{> afQuickField name="project_id" value=p.id type="hidden"}}
+        {{> afQuickField name="Latitude"}}
+        {{> afQuickField name="Longitude"}}
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
+    </div>
+  </div>
+</div>
 </template>

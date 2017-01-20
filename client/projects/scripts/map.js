@@ -21,5 +21,16 @@ Template.map.helpers({
         zoom: MAP_ZOOM
       };
     }
-  }
+  },
 });
+
+Template.map.events({
+  'click .addPinButton': function(){
+    $('.pin_editor').addClass('hidden');
+    $('.pin_create').removeClass('hidden');
+  },
+  'click .cancelNewPinButton': function(){
+    $('.pin_create').addClass('hidden');
+    $('.pin_editor').removeClass('hidden');
+  }
+})

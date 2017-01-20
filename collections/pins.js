@@ -26,7 +26,15 @@ PinsSchema = new SimpleSchema({
   name: {
     type: String,
     label: "Pin Name",
-    optional: true
+    defaultValue: function(){
+      return ("Pin " + Pins.find().count() + 1); //doesnt work right
+    }
+  },
+  project_id:{
+    type: String,
+    autoform: {
+      type: 'hidden',
+    }
   },
   Latitude: {
     type: Number,
@@ -41,7 +49,7 @@ PinsSchema = new SimpleSchema({
   createdBy: {
     type: String,
     label: "author",
-    autoValue: function(){
+    defaultValue: function(){
       return Meteor.userId();
     },
     autoform: {
