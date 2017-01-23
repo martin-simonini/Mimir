@@ -12,9 +12,9 @@ Template.register.events({
       if(error){
         console.log(error.reason);
       }else{
-        Router.go("dashboard");
+        FlowRouter.route("dashboard");
       }
     });
-    Router.go("dashboard");
+    FlowRouter.route("dashboard");
   }
 });

@@ -27,15 +27,15 @@
       <button class="cancelNewPinButton btn btn-primary">Cancel</button>
     </div>
     <div class="new_pin_body">
-      {{#autoForm collection="Pins" id="insertPinsForm" type="insert"}}
-      <fieldset>
-        {{> afQuickField name="name"}}
-        {{> afQuickField name="project_id" value=p.id type="hidden"}}
-        {{> afQuickField name="Latitude"}}
-        {{> afQuickField name="Longitude"}}
-      </fieldset>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    {{/autoForm}}
+      <form class="new_pin_form">
+        <p class="label"><b>Pin Name: </b></p>
+        <p><input type="String" name="name"></p>
+        <p class="label"><b>Latitude:</b></p>
+        <p><input type="Number" step="any" name="Latitude"></p>
+        <p class="label"><b>Longitude:</b></p>
+        <p><input type="Number" step="any" name="Longitude"></p>
+        <p><input type="submit" value="Submit"></p>
+      </form>
     </div>
   </div>
 </div>

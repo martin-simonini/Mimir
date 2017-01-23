@@ -31,3 +31,9 @@
   float: right;
 }
 .hidden{visibility: hidden;}
+.label{
+  text-align: left;
+}
+.new_pin_body{
+  text-align: center;
+}
