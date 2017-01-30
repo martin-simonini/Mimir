@@ -2,23 +2,23 @@ var MAP_ZOOM = 15;
 var markers = {};
 var project_id = FlowRouter.getParam("id");
 
+Template.map.onCreated(function() {
+    var self = this;
+    self.autorun(function() {
+      self.subscribe('pins');
+    });
+});
+Template.map.helpers({
+  pin: function(){
+    console.log(Pins.find({project_id: project_id}));
+    return Pins.find({project_id: project_id});
+  }
+})
+
 Meteor.startup(function(){
   GoogleMaps.load({key: "AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU" });
-  markers = Pins.find({project_id: project_id});
-  console.log(markers);
 });
 
-Template.map.onCreated(function() {
-  for(let i = 0; i < markers.length();i++){
-    var marker = new google.maps.Marker({
-      draggable: false,
-      animation: google.maps.Animation.DROP,
-      position: new google.maps.LatLng(markers[i].Latitude,markers[i].Longitude),
-      map: map.instance,
-      id: document._id
-    });
-  }
-});
 
 Template.map.helpers({
   geolocationError: function() {
@@ -58,6 +58,6 @@ Template.map.events({
       Latitude: lat,
       Longitude: long,
 
-    })
+    });
   }
 })
