@@ -1,0 +1,22 @@
+<!--
+File: pinCreator.html
+Author: Martin Simonini
+Purpose: Allows user to create new pins for their spesfic project
+-->
+<Template name="pinCreator">
+  <div class="header">
+    <h4>New pin</h4>
+    <button class="cancelNewPinButton btn btn-primary">Cancel</button>
+  </div>
+  <div class="new_pin_body">
+    <form class="new_pin_form">
+      <p class="label"><b>Pin Name: </b></p>
+      <p><input type="String" name="name"></p>
+      <p class="label"><b>Latitude:</b></p>
+      <p><input type="Number" step="any" name="Latitude"></p>
+      <p class="label"><b>Longitude:</b></p>
+      <p><input type="Number" step="any" name="Longitude"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+  </div>
+</Template>

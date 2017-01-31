@@ -1,20 +1,9 @@
+import { Template } from 'meteor/templating';
+import '../map.html';
+import './project.js'
+
 var MAP_ZOOM = 15;
-var markers = {};
-var project_id = FlowRouter.getParam("id");
-
-Template.map.onCreated(function() {
-    var self = this;
-    self.autorun(function() {
-      self.subscribe('pins');
-    });
-});
-Template.map.helpers({
-  pin: function(){
-    console.log(Pins.find({project_id: project_id}));
-    return Pins.find({project_id: project_id});
-  }
-})
-
+var markers = Pins.find({});
 Meteor.startup(function(){
   GoogleMaps.load({key: "AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU" });
 });
@@ -37,6 +26,20 @@ Template.map.helpers({
   },
 });
 
+Template.map.onCreated(function(){
+  GoogleMaps.ready('map', function(map){
+    var markers = {};
+    for(let i = 0; i < pins.length;i++){
+      markers[i] = new google.maps.Marker({
+        position: new gooogle.maps.LatLng(pins[i].Latitude,pins[i].Longitude),
+        map: map.instance
+      })
+    }
+  })
+})
+
+/* All these actions have been moved to another file, but I still have not
+   copied this code.
 Template.map.events({
   'click .addPinButton': function(){
     $('.pin_editor').addClass('hidden');
@@ -60,4 +63,4 @@ Template.map.events({
 
     });
   }
-})
+})*/

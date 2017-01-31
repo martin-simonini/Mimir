@@ -1,0 +1,17 @@
+<!--
+File: map.html
+Author: Martin Simonini
+Purpose: Displays Google Map of the project area with pins.
+-->
+<template name="map">
+  <p>{{p.name}}</p>
+<div class="container-fluid parent_container">
+  <div class="map-container">
+    {{#unless geolocationError}}
+      {{> googleMap name="map" options=mapOptions}}
+    {{else}}
+      Geolocation failed: {{geolocationError}}
+    {{/unless}}
+  </div>
+</div>
+</template>

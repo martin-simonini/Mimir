@@ -1,0 +1,18 @@
+<!--
+File: pinDashboard.html
+Author: Martin Simonini
+Purpose: Displays all current pins
+-->
+<Template name="pinDashboard">
+  <div class="header">
+    <h4>Pins</h4>
+    <button class="addPinButton btn btn-primary">Add Pin</button>
+  </div>
+  <div class="pin_body">
+    <ul>
+    {{#each pins}}
+    <li><a href="#">{{name}}</a></li>
+    {{/each}}
+  </ul>
+  </div>
+</Template>
