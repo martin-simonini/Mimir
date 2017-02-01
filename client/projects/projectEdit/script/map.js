@@ -3,13 +3,16 @@ import '../map.html';
 import './project.js'
 
 var MAP_ZOOM = 15;
-var markers = Pins.find({});
+
 Meteor.startup(function(){
   GoogleMaps.load({key: "AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU" });
 });
 
 
 Template.map.helpers({
+  pins() {
+    return Pins.find().fetch();
+  },
   geolocationError: function() {
     var error = Geolocation.error();
     return error && error.message;
@@ -27,16 +30,18 @@ Template.map.helpers({
 });
 
 Template.map.onCreated(function(){
-  GoogleMaps.ready('map', function(map){
-    var markers = {};
-    for(let i = 0; i < pins.length;i++){
-      markers[i] = new google.maps.Marker({
-        position: new gooogle.maps.LatLng(pins[i].Latitude,pins[i].Longitude),
+  GoogleMaps.ready('map',function(map){
+    var markers = Pins.find().fetch();
+    console.log(markers);
+    for(let i = 0; i<markers.length;i++){
+      var pin = new google.maps.Marker({
+        position: new google.maps.LatLng(markers[i].Latitude,markers[i].Longitude),
         map: map.instance
-      })
+      });
     }
-  })
-})
+  });
+});
+
 
 /* All these actions have been moved to another file, but I still have not
    copied this code.
