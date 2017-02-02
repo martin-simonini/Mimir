@@ -1,12 +1,10 @@
-Template.pinDashboard.onCreated(function() {
-    var self = this;
-    self.autorun(function() {
-      self.subscribe('pins');
-    });
-});
+import { Template } from 'meteor/templating';
+import '../pinDashboard.html';
+import './project.js'
 
 Template.pinDashboard.helpers({
   pins() {
-    return pins.find({});
+    var id = FlowRouter.getParam("id");
+    return Pins.find({project_id: id}).fetch();
   }
 });

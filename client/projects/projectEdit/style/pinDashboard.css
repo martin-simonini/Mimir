@@ -21,10 +21,19 @@
   display: inline-block;
   float: right;
 }
-.hidden{visibility: hidden;}
-.label{
-  text-align: left;
-}
 .new_pin_body{
   text-align: center;
+}
+ul{
+  width: 100%;
+  float: left;
+}
+.pins_li{
+  width: 100%;
+  color: black;
+}
+.pins_li > a{
+  text-decoration: none;
+  text-align: left;
+  color: black;
 }

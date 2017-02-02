@@ -11,7 +11,8 @@ Meteor.startup(function(){
 
 Template.map.helpers({
   pins() {
-    return Pins.find().fetch();
+    var id = FlowRouter.getParam("id");
+    return Pins.find({project_id: id}).fetch();
   },
   geolocationError: function() {
     var error = Geolocation.error();
@@ -32,7 +33,6 @@ Template.map.helpers({
 Template.map.onCreated(function(){
   GoogleMaps.ready('map',function(map){
     var markers = Pins.find().fetch();
-    console.log(markers);
     for(let i = 0; i<markers.length;i++){
       var pin = new google.maps.Marker({
         position: new google.maps.LatLng(markers[i].Latitude,markers[i].Longitude),
