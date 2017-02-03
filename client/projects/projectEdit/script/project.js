@@ -6,4 +6,4 @@ Template.project.helpers({
         return Projects.findOne({_id: id});
     }
 });
-Session.set("editing", "false");
+// Session.set("editing", "false");
