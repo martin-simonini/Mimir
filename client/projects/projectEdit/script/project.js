@@ -1,4 +1,6 @@
-
+Template.project.onCreated(function(){
+  Session.set("editing",true);
+})
 
 Template.project.helpers({
     p: function(){
@@ -6,4 +8,3 @@ Template.project.helpers({
         return Projects.findOne({_id: id});
     }
 });
-Session.set("editing", "false");
