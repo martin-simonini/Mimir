@@ -8,3 +8,9 @@ Template.pinDashboard.helpers({
     return Pins.find({project_id: id}).fetch();
   }
 });
+
+Template.pinDashboard.events({
+  'click .addPinButton': function(){
+    Session.set("editing",true);
+  }
+})

@@ -12,8 +12,8 @@ Purpose: Acts as a container for the project editing page. This file collects al
       {{> map}}
     </div>
     <div class="pin_container">
-      {{#if Session.}}
-        {{> pinEditor}}
+      {{#if editing}}
+        {{> pinCreator}}
       {{else}}
         {{> pinDashboard}}
       {{/if}}

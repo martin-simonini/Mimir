@@ -1,13 +1,10 @@
 .container{
   width: 100%;
-  height: 60%;
-  border: 1px solid black;
 }
 .map_container{
   float: left;
-  display: inline-block;
+  margin: 1px;
 }
 .pin_container{
-  float: left;
-  display: inline-block;
+  float: right;
 }
