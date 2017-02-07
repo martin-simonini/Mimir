@@ -1,4 +1,18 @@
-img{
+
+
+.Mlogo{
+  width: 100px;
+  height: 100px;
+}
+.Nlogo{
+  float: right;
+
+}
+.border{
+  border: 1px solid black;
+}
+h1{
+  text-align: center;
   width: 100px;
   height: 100px;
 }
