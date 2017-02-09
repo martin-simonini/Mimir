@@ -13,3 +13,11 @@ black/white for text
 login tutorial: http://meteortips.com/second-meteor-tutorial/user-accounts/
 
 Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU
+
+uploading to a branch:
+
+git init //make sure you are in a repo
+git add . //adds all the new files
+git commit -m"<message>" //puts a message to your commit
+git checkout -b <branch> //changes to branch
+git push origin <branch> //pushes to branch
