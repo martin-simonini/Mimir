@@ -1,17 +1,44 @@
 
 
-/*.Mlogo{
-  width: 100px;
-  height: 100px;
+.Isize{
+  width: 150px;
+  height: 150px;
 }
-.Nlogo{
-  float: right;
 
-}
 .border{
   border: 1px solid black;
 }
-h1{
+
+.column1{
+  -webkit-column-count: 1;
+  width: 70%;
+}
+
+.column2{
+  -webkit-column-count: 2;
+  -webkit-column-gap: 40px;
+}
+
+.column3{
+  -webkit-column-count: 3;
+  -webkit-column-gap: 40px;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+/*h1{
   text-align: center;
   width: 100px;
   height: 100px;

@@ -14,6 +14,10 @@ login tutorial: http://meteortips.com/second-meteor-tutorial/user-accounts/
 
 Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU
 
+commands to know:
+git status //checks the status of the repo
+git branch //shows what branch you are on
+
 uploading to a branch:
 
 git init //make sure you are in a repo

@@ -1,24 +1,34 @@
 <Template name="LoggedOut">
 
-  <div class="info container-fluid">
-    
+  <div class="border column3">
+
     <div class="row">
-      <div class=".col-xs-4 border">
-        <img src="../login/pictures/MLogo.PNG" alt="Mimir Logo" class="MLogo">
+      <div>
+        <img src="../login/pictures/MLogo.PNG" alt="Mimir Logo" class="border Isize">
       </div>
 
-      <div class=".col-xs-4 border" >
-        <h1>Mimir</h1>
+      <div>
+        <h1 class="border">Mimir</h1>
       </div>
 
-      <div class=".col-xs-4 border">
-        <img src="../login/pictures/NLogo.jpeg" alt="North Logo" class="Nlogo">
+      <div>
+        <img src="../login/pictures/NLogo.jpeg" alt="North Logo" class="border right Isize">
       </div>
     </div>
   </div>
 
-  <div class="login">
-    {{> login}}
+  <div>
+    <div class="left border column1">
+      <h1>Recent udates:</h1>
+      <p>1/12/17</p>
+      {{> lorem}}
+      <p>1/20/17</p>
+      {{> lorem}}
+    </div>
+
+    <div class="login right border">
+      {{> login}}
+      <a href="/register">Register</a>
+    </div>
   </div>
-  <a href="/register">Register</a>
 </Template>
