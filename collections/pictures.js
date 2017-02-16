@@ -1,37 +1,38 @@
-Images = new Mongo.Collection('images');
-EntriesImages = new FS.Collection('images', {
-  stores: [new FS.Store.GridFS('EntriesImages')]
-});
+if(Meteor.isServer){
+  var imageStore - new FS.Store.S3("images", {
+    acessKeyId: Meteor.settings.AWSAccessKeyId,
+    secretAccessKey: Meteor.settings.AWSSecretAccessKey,
+    bucket:Meteor.settings.AWSBucket
+  });
 
-ImagesSchema = new SimpleSchema({
-  image: {
-    type: String,
-    label: "Image"
-  },
-  author: {
-    type: String,
-    label: "Author",
-    autoValue: function(){
-      return this.userId;
-    },
-    autoform: {
-      type: "hidden"
+  Images = new FS.Collection("Images", {
+    store: [imagesStore],
+    filter: {
+      allow: {
+        contentTypes: ['images/*']
+      }
     }
-  },
-  pin: {
-    type: String,
-    autoform: {
-      type: 'hidden',
+  });
+}
+
+// On the client just create a generic FS Store as don't have
+// access (or want access) to S3 settings on client
+if(Meteor.isClient){
+  var imageStore = new FS.Store.S3("images");
+  Images = new FS.Collection("Images", {
+    stores: [imageStore],
+    filter: {
+      allow: {
+        contentTypes: ['image/*']
+      },
+      onInvalid: function(message){
+        toastr.error(message);
+      }
     }
-  }
-});
+  });
+}
 
-Images.attachSchema(ImagesSchema);
-
-// Publishing the collections (server folder)
-Meteor.publish('images', function(){
-    return Images.find({author: this.userId});
-});
-Meteor.publish('EntriesImages', function(){
-    return EntriesImages.find();
+Images.allow({
+  insert: function(){return true;},
+  update: function(){return true;}
 });

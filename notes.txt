@@ -11,5 +11,7 @@ Yellow #FFBC00 -> buttons
 black/white for text
 
 login tutorial: http://meteortips.com/second-meteor-tutorial/user-accounts/
+GridFS tutorial: https://forums.meteor.com/t/upload-images-with-gridfs/16617
+better tutorial for GridFS: http://experimentsinmeteor.com/photo-blog-part-1/
 
 Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU

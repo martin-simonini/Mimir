@@ -39,6 +39,9 @@ datariot:ganalytics           #Publish pageviews and events to Google Analytics 
 check                         #Check whether a value matches a pattern
 cfs:standard-packages         #Filesystem for Meteor, collectionFS
 cfs:gridfs                    #GridFS storage adapter for CollectionFS
+cfs:s3                        #Amazon Web Services S3 storage adapter for CollectionFS
 dburles:google-maps           #Google Maps Javascript API v3
 mdg:geolocation               #Provides reactive geolocation on desktop and mobile.
 session                       #Session variable
+chrismbeckett:toastr          #Gnome / Growl type non-blocking notifications
+raix:ui-dropped-event         #Add dropped event to Meteor UI Templates
