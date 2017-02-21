@@ -13,14 +13,20 @@
   padding-right: 20%;
 }
 
-/*.border{
+.border{
   border: 1px solid black;
-}*/
+}
 
 .column1{
   -webkit-column-count: 1;
-  width: 70%;
+  float:left;
+  width: 65%;
   padding-left: 5%;
+}
+
+.column1a{
+  -webkit-column-count: 1;
+  width: 25%;
 }
 
 .column2{
