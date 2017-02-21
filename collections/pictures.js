@@ -1,15 +1,16 @@
-if(Meteor.isServer){
-  var imageStore - new FS.Store.S3("images", {
-    acessKeyId: Meteor.settings.AWSAccessKeyId,
+if (Meteor.isServer) {
+  var imageStore = new FS.Store.S3("images", {
+    /* REQUIRED */
+    accessKeyId: Meteor.settings.AWSAccessKeyId,
     secretAccessKey: Meteor.settings.AWSSecretAccessKey,
-    bucket:Meteor.settings.AWSBucket
+    bucket: Meteor.settings.AWSBucket
   });
 
   Images = new FS.Collection("Images", {
-    store: [imagesStore],
+    stores: [imageStore],
     filter: {
       allow: {
-        contentTypes: ['images/*']
+        contentTypes: ['image/*']
       }
     }
   });
@@ -17,7 +18,7 @@ if(Meteor.isServer){
 
 // On the client just create a generic FS Store as don't have
 // access (or want access) to S3 settings on client
-if(Meteor.isClient){
+if (Meteor.isClient) {
   var imageStore = new FS.Store.S3("images");
   Images = new FS.Collection("Images", {
     stores: [imageStore],
@@ -25,14 +26,17 @@ if(Meteor.isClient){
       allow: {
         contentTypes: ['image/*']
       },
-      onInvalid: function(message){
+      onInvalid: function(message) {
         toastr.error(message);
       }
     }
   });
 }
 
+// Allow rules
 Images.allow({
-  insert: function(){return true;},
-  update: function(){return true;}
+  insert: function(userId) { return userId != null; },
+  update: function(userId) { return userId != null; },
+  remove: function(userId, image){ return userId === image.userId;},
+  download: function(){return true;}
 });

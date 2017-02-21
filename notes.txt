@@ -15,3 +15,5 @@ GridFS tutorial: https://forums.meteor.com/t/upload-images-with-gridfs/16617
 better tutorial for GridFS: http://experimentsinmeteor.com/photo-blog-part-1/
 
 Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU
+
+*read through the slingshot doc on atmosherejs

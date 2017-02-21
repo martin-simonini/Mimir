@@ -45,3 +45,5 @@ mdg:geolocation               #Provides reactive geolocation on desktop and mobi
 session                       #Session variable
 chrismbeckett:toastr          #Gnome / Growl type non-blocking notifications
 raix:ui-dropped-event         #Add dropped event to Meteor UI Templates
+momentjs:moment               #Moment.js (official): parse, validate, manipulate, and display dates - official Meteor packaging
+edgee:slingshot               #Directly post files to cloud storage services, such as AWS-S3
