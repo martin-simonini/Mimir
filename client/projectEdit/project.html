@@ -7,7 +7,9 @@ Purpose: Acts as a container for the project editing page. This file collects al
 
 <Template name="project">
   <h1>{{p.name}}</h1>
-  {{> map}}
+<div class="map_container">
+    {{> map}}
+</div>
   {{#if $.Session.get 'editing'}}
     {{> pinCreator}}
   {{else}}

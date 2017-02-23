@@ -1,0 +1,41 @@
+<Template name="videotest">
+
+  {{> videodropzone}}
+
+  {{#each videos}}
+    <video width="320" height="240" controls>
+      {{> video}}
+    </video>
+  {{/each}}
+
+</Template>
+
+<template name="videodropzone">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="videodropzone" class="videodropzone">
+        <div class="well well-drop-zone">
+          Drop file(s) here to upload
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="video">
+  <!-- image info -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="video-info">
+        {{#if ownVideo}}
+          <a class="delete-video">
+            <i class="fa fa-trash fa-2x"></i>
+          </a>
+        {{/if}}
+        Posted on: {{postDate}} /
+        Posted by: {{username}}
+      </div>
+    </div>
+  </div>
+
+</template>

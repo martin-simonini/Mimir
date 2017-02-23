@@ -4,6 +4,7 @@
 .map_container{
   float: left;
   margin: 1px;
+  border: 1px solid black;
 }
 .pin_container{
   float: right;
