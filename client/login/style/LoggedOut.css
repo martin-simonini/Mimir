@@ -20,7 +20,7 @@
 .column1{
   -webkit-column-count: 1;
   float:left;
-  width: 65%;
+  width: 70%;
   padding-left: 5%;
 }
 
@@ -56,8 +56,44 @@
 .recent {
   float: left;
 }
-/*h1{
-  text-align: center;
-  width: 100px;
-  height: 100px;
-}*/
+
+.grey{
+  background:rgb(158, 158, 158);
+}
+
+.greyg{
+  background: -webkit-linear-gradient(left, rgba(80,114,203,0), rgba(158, 158, 158, 1));
+}
+
+.gcolor{
+  background: #466368;
+  background: linear-gradient(to right bottom, #648880, #293f50);
+}
+
+.loginbox{
+  width: 20%;
+  border: 25px solid rgb(158, 158, 158);
+  padding: .1%;
+  margin: 2.5%;
+}
+
+.updatebox{
+  width: 70%;
+  border: 25px solid rgb(158, 158, 158);
+  padding: .1%;
+  margin: 2.5%;
+}
+
+.headerbox{
+  width: 100%;
+  border: 25px solid rgb(158, 158, 158);
+}
+
+#body{
+  width: 100vw;
+  height: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #466368;
+  background: linear-gradient(to right bottom, #648880, #293f50);
+}

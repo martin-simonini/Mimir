@@ -1,21 +1,20 @@
 <Template name="LoggedOut">
-
-  <div class="border column3">
+<div id="body">
+  <div class="column3 grey headerbox">
     <div>
-      <img src="../login/pictures/MLogo.PNG" alt="Mimir Logo" class="border Isize lpadding">
+      <img src="../login/pictures/MLogo.PNG" alt="Mimir Logo" class="Isize lpadding">
     </div>
 
     <div>
-      <h1 class="border">Mimir</h1>
+      <h1 class="greyg">Mimir</h1>
     </div>
 
     <div>
-      <img src="../login/pictures/NLogo.jpeg" alt="North Logo" class="border right Isize rpadding">
+      <img src="../login/pictures/NLogo.jpeg" alt="North Logo" class="right Isize rpadding">
     </div>
   </div>
 
-
-    <div class="border column1">
+    <div class="column1 grey updatebox">
       <h1>Recent udates:</h1>
       <p>1/12/17</p>
       {{> lorem}}
@@ -23,9 +22,9 @@
       {{> lorem}}
     </div>
 
-    <div class="border right column1a">
+    <div class="right column1a grey loginbox">
       {{> login}}
-      <a href="/register">Register</a>
+      <a href="/register"><u>Register</u></a>
     </div>
-
+</div>
 </Template>
