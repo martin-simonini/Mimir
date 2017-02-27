@@ -12,7 +12,8 @@ Purpose: Displays all current pins
     <div class="pin_body">
       <ul>
       {{#each pins}}
-      <li class="pins_li"><a href="#">{{name}}</a></li>
+      <li class="pins_li">{{name}} <a href="#" class="edit"><i class="fa fa-pencil"></i></a>
+                                   <a href="#" class="delete"><i class="fa fa-trash"></i></a></li>
       {{/each}}
     </ul>
     </div>

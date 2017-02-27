@@ -12,5 +12,8 @@ Template.pinDashboard.helpers({
 Template.pinDashboard.events({
   'click .addPinButton': function(){
     Session.set("editing",true);
+  },
+  'click .edit': function(){
+    Session.set("pin-id",this._id);
   }
 })
