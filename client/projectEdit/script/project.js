@@ -1,10 +1,10 @@
 Template.project.onCreated(function(){
-  Session.set("editing",false);
+  Session.set("pinsTemplate", "pinDashboard");
 })
 
 Template.project.helpers({
-    editing: function(){
-      return Session.get("editing");
+    pinsTemplate: function(){
+      return Session.get("pinsTemplate");
     },
     p: function(){
       var id = FlowRouter.getParam("id");

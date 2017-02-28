@@ -11,9 +11,13 @@ Template.pinDashboard.helpers({
 
 Template.pinDashboard.events({
   'click .addPinButton': function(){
-    Session.set("editing",true);
+    Session.set("pinsTemplate","pinCreator");
   },
   'click .edit': function(){
     Session.set("pin-id",this._id);
+    Session.set("pinsTemplate", "pinEdit");
+  },
+  'click .delete': function(){
+    Pins.remove(this._id);
   }
 })

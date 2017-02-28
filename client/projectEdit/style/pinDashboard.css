@@ -1,8 +1,7 @@
 .header{
-  width: 100%;
+  width: 700px;
   border: 1px solid black;
   float: left;
-  position: relative;
   top: 0;
   margin: 0;
   padding: 0;
@@ -28,7 +27,7 @@ ul{
   margin: 0;
 }
 .pins_li{
-  width: 550px;
+  width: 700px;
   height: 50px;
   border: 1px solid black;
   float: left;
@@ -36,4 +35,5 @@ ul{
   padding: 0;
   display: inline-block;
   font-size: 1.5em;
+  background: white;
 }
