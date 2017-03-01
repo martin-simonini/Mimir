@@ -39,6 +39,12 @@ Template.map.onCreated(function(){
         map: map.instance
       });
     }
+    if(Session.get("mapClick") === "true"){
+      google.maps.event.addListener(map.instance, 'click', function(event){
+        Session.set("lat", event.latLng.lat());
+        Session.set("long", event.latLng.lng());
+      })
+    }
   });
 });
 

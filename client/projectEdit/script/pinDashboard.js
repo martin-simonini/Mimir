@@ -2,6 +2,9 @@ import { Template } from 'meteor/templating';
 import '../pinDashboard.html';
 import './project.js'
 
+Template.pinDashboard.onCreated(function(){
+  Session.set("mapClick","false");
+})
 Template.pinDashboard.helpers({
   pins() {
     var id = FlowRouter.getParam("id");

@@ -18,3 +18,6 @@ Dynamic templates: https://themeteorchef.com/tutorials/using-dynamic-templates
 Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU
 
 *read through the slingshot doc on atmosherejs
+
+*add the ability to drag markers onto the map when creating pins
+      * i think this is an issue on where to put the event listner in the map class
