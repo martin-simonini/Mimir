@@ -1,0 +1,31 @@
+<Template name="pinEdit">
+  <div class="pinEdit-container">
+    <div class="header">
+      <a href="#" class="back"><i class="fa fa-angle-left fa-4x"></i></a>
+      <h1 class='editpin-h1'>Edit a Pin</h1>
+    </div>
+    <div class="pinEdit-body">
+      <form class="pinEdit-form">
+        <p><b>Name:</b> <input type="string" name="name" value={{pin.name}} class="pin-name"> </p>
+        <p><b>Latitude:</b> <input type="Number" step="any" name="Latitude" value={{pin.Latitude}}></p>
+        <p><b>Longitude:</b><input type="Number" step="any" name="Longitude" value={{pin.Longitude}}></p>
+        <p><b>Pin Description:</b></p>
+        <textarea name="desc" rows="4" cols="30"></textarea>
+        <hr>
+        <div class="upload-file">
+          {{> dropzone}}
+        </div>
+        <hr>
+        <div class="picture-container">
+          <button class="btn btn-primary dropdown-toggle picture-button" type="button" data-toggle="dropdown">
+            <span class="caret"></span>Pictures ({{numOfpics}})</button>
+          <ul class="dropdown-menu">
+            {{#each images}}
+              {{> image}}
+            {{/each}}
+          </ul>
+        </div>
+      </form>
+    </div>
+  </div>
+</Template>

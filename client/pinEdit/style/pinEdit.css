@@ -1,0 +1,42 @@
+.pinEdit-container{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.header{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+.editpin-h1{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 50%;
+  color: white;
+  vertical-align: top;
+}
+.back{float: left;}
+.pinEdit-body{
+  font-size: 1.5em;
+  text-align: left;
+}
+/*make the picture overflow scrollable!!*/
+.picture-button{
+  width: 60%;
+  text-align: left;
+  float: left;
+  margin-right: 0;
+}
+
+
+.dropdown-menu{
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+.upload-file{
+  height: 15vh;
+}
+.pin-name{
+  width: 40%;
+}
