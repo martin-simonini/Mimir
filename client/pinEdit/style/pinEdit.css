@@ -33,9 +33,13 @@
   position: relative;
   top: 0;
   width: 100%;
+  max-height: 800px;
+  overflow-y: auto;
+  overflow-x: visible;
 }
 .upload-file{
-  height: 15vh;
+  height: 19vh;
+  margin: 0;
 }
 .pin-name{
   width: 40%;

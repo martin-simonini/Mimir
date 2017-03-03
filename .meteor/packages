@@ -36,13 +36,13 @@ zimme:active-route            #Active route helpers
 gwendall:auth-client-callbacks  #Adds client-side onLogin and onLogout methods
 meteortoys:allthings          #Insanely Handy Development Tools
 datariot:ganalytics           #Publish pageviews and events to Google Analytics using the new analytics.js code.
-check                         #Check whether a value matches a pattern
+check@1.2.4                         #Check whether a value matches a pattern
 cfs:standard-packages         #Filesystem for Meteor, collectionFS
 cfs:gridfs                    #GridFS storage adapter for CollectionFS
 cfs:s3                        #Amazon Web Services S3 storage adapter for CollectionFS
 dburles:google-maps           #Google Maps Javascript API v3
 mdg:geolocation               #Provides reactive geolocation on desktop and mobile.
-session                       #Session variable
+session@1.1.7                       #Session variable
 chrismbeckett:toastr          #Gnome / Growl type non-blocking notifications
 raix:ui-dropped-event         #Add dropped event to Meteor UI Templates
 momentjs:moment               #Moment.js (official): parse, validate, manipulate, and display dates - official Meteor packaging

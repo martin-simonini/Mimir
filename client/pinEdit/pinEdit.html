@@ -25,6 +25,26 @@
             {{/each}}
           </ul>
         </div>
+        <div class="picture-container">
+          <button class="btn btn-primary dropdown-toggle picture-button" type="button" data-toggle="dropdown">
+            <span class="caret"></span>Video ({{numOfVideos}})</button>
+          <ul class="dropdown-menu">
+            {{#each videos}}
+              {{> video}}
+            {{/each}}
+          </ul>
+        </div>
+        <div class="picture-container">
+          <button class="btn btn-primary dropdown-toggle picture-button" type="button" data-toggle="dropdown">
+            <span class="caret"></span>PDF ({{numOfPdf}})</button>
+          <ul class="dropdown-menu">
+            {{#each pdf}}
+              {{> image}}
+            {{/each}}
+          </ul>
+        </div>
+
+        <p><input type="submit" value="Submit"></p>
       </form>
     </div>
   </div>

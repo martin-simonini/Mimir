@@ -3,13 +3,13 @@
   text-align: center;
 }
 .map_container{
-width: 60%;
+width: 50%;
 height: 700px;
 border: 1px solid black;
 float: left;
 }
 .edit_container{
-  width: 40%;
+  width: 50%;
   height: 700px;
   vertical-align: top;
   border: 1px solid black;
