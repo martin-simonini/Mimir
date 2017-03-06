@@ -1,5 +1,5 @@
 Template.pinCreator.onCreated(function(){
-  Session.set("mapClick","true");
+  Session.set("mapTemplate","map_editable");
 })
 Template.pinCreator.events({
   'click .cancelNewPinButton': function(){
@@ -20,5 +20,6 @@ Template.pinCreator.events({
 
    });
    Session.set("pinsTemplate", "pinDashboard");
+   Session.set("mapTemplate", "map");
  }
 })

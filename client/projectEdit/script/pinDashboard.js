@@ -2,9 +2,10 @@ import { Template } from 'meteor/templating';
 import '../pinDashboard.html';
 import './project.js'
 
-Template.pinDashboard.onCreated(function(){
-  Session.set("mapClick","false");
-})
+Meteor.startup(function(){
+  GoogleMaps.load({key: "AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU" });
+});
+
 Template.pinDashboard.helpers({
   pins() {
     var id = FlowRouter.getParam("id");

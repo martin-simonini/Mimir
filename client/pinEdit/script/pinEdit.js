@@ -43,5 +43,8 @@ Template.pinEdit.events({
       Longitude: Longitude,
       desc: desc,
     }});
+  },
+  'click .back': function(){
+    Session.set("pinsTemplate","pinDashboard");
   }
 })

@@ -2,7 +2,7 @@ import { Template } from 'meteor/templating';
 import '../map.html';
 import './project.js'
 
-var MAP_ZOOM = 15;
+var MAP_ZOOM = 14;
 
 Meteor.startup(function(){
   GoogleMaps.load({key: "AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU" });
@@ -36,42 +36,14 @@ Template.map.onCreated(function(){
     for(let i = 0; i<markers.length;i++){
       var pin = new google.maps.Marker({
         position: new google.maps.LatLng(markers[i].Latitude,markers[i].Longitude),
+        animation: google.maps.Animation.DROP,
+        draggable: true,
         map: map.instance
       });
     }
-    if(Session.get("mapClick") === "true"){
-      google.maps.event.addListener(map.instance, 'click', function(event){
-        Session.set("lat", event.latLng.lat());
-        Session.set("long", event.latLng.lng());
-      })
-    }
+    google.maps.event.addListener(markers, 'dragend', function(event) {
+      console.log("got here!");
+      Pins.update(markers.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
+    });
   });
 });
-
-
-/* All these actions have been moved to another file, but I still have not
-   copied this code.
-Template.map.events({
-  'click .addPinButton': function(){
-    $('.pin_editor').addClass('hidden');
-    $('.pin_create').removeClass('hidden');
-  },
-  'click .cancelNewPinButton': function(){
-    $('.pin_create').addClass('hidden');
-    $('.pin_editor').removeClass('hidden');
-  },
-  'submit form': function(event){
-    event.preventDefault();
-    var name = $('[name=name]').val();
-    var lat = $('[name=Latitude]').val();
-    var long = $('[name=Longitude]').val();
-
-    Pins.insert({
-      name: name,
-      project_id: project_id,
-      Latitude: lat,
-      Longitude: long,
-
-    });
-  }
-})*/
