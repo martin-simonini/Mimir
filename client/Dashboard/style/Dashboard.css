@@ -22,3 +22,12 @@ ul{
 h1{
   text-align: center;
 }
+
+.font{
+  font-size: 500%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.toppadding{
+  padding-top: 2%;
+}

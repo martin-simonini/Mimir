@@ -61,7 +61,7 @@
   background:rgb(195, 195, 195);
 }
 
-.black{
+.darkgrey{
   background: rgb(180, 176, 176);
 }
 
@@ -80,6 +80,7 @@
   padding: .1%;
   margin: 2.5%;
   border-radius: 5%;
+  box-shadow: 5px 5px 15px #888888;
 }
 
 .updatebox{
@@ -88,12 +89,27 @@
   padding: .1%;
   margin: 2.5%;
   border-radius: 5px 25px 5px 25px;
+  box-shadow: 5px 5px 15px #888888;
 }
 
 .headerbox{
   width: 100%;
   border: 25px solid #b4b0b0;
   border-bottom: 6px solid rgba(37, 37, 37, 0.85);
+}
+
+.paddingleft{
+  padding-left: 40%;
+  padding-top: 5%;
+}
+
+.registerbox{
+  width: 34%;
+  border: 25px solid rgb(195, 195, 195);
+  padding: .1%;
+  margin: 2.5%;
+  border-radius: 5%;
+  box-shadow: 5px 5px 15px #888888;
 }
 
 .mimirbox{

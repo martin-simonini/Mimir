@@ -1,9 +1,13 @@
 <Template name="Dashboard">
-  <h1>My Projects</h1>
-  <button class="newProject btn-primary"><a href="/newProject">New Project</a></button>
-  <ul class="projectList">
-    {{#each project}}
-      <li><a href="/project/{{_id}}" style="text-decoration:none;">{{> projectCard}}</a></li>
-    {{/each}}
-  </ul>
+  <div id="body">
+    <div class="toppadding">
+      <h1>My Projects</h1>
+      <button class="newProject btn-primary"><a href="/newProject">New Project</a></button>
+      <ul class="projectList">
+          {{#each project}}
+        <li><a href="/project/{{_id}}" style="text-decoration:none;">{{> projectCard}}</a></li>
+          {{/each}}
+      </ul>
+    </div>
+  </div>
 </Template>

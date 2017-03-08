@@ -6,25 +6,13 @@ Purpose: Acts as a container for the project editing page. This file collects al
 -->
 
 <Template name="project">
-  <h1>{{p.name}}</h1>
-  {{> map}}
-  <!-- {{#if $.Session.get 'editing'}}
-    {{> pinEditor}}
-  {{else}}
-    {{> pinDashboard}}
-  {{/if}} -->
-
-  <div class="container">
+  <h1 class="name">{{p.name}}</h1>
+  <div class="project-container">
     <div class="map_container">
-      {{> map}}
+        {{> map}}
     </div>
-    <div class="pin_container">
-
-        {{> pinEditor}}
-
-        {{> pinDashboard}}
-    
+    <div class="edit_container">
+      {{> Template.dynamic template=pinsTemplate }}
     </div>
   </div>
-
 </Template>

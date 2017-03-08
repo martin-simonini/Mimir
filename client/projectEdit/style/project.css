@@ -1,13 +1,32 @@
-.container{
+.project-container{
   width: 100%;
-  height: 60%;
-  border: 1px solid black;
+  text-align: center;
 }
 .map_container{
-  float: left;
-  display: inline-block;
+width: 50%;
+height: 700px;
+border: 1px solid black;
+float: left;
 }
-.pin_container{
-  float: left;
-  display: inline-block;
+.edit_container{
+  width: 50%;
+  height: 700px;
+  vertical-align: top;
+  border: 1px solid black;
+  margin: 0;
+  float: right;
+}
+.edit_container > a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+.edit_container > a:hover
+{
+     color:#00A0C6;
+     text-decoration:none;
+     cursor:pointer;
+}
+.name{
+  text-align: center;
 }

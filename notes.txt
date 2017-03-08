@@ -11,9 +11,17 @@ Yellow #FFBC00 -> buttons
 black/white for text
 
 login tutorial: http://meteortips.com/second-meteor-tutorial/user-accounts/
+GridFS tutorial: https://forums.meteor.com/t/upload-images-with-gridfs/16617
+better tutorial for GridFS: http://experimentsinmeteor.com/photo-blog-part-1/
+Dynamic templates: https://themeteorchef.com/tutorials/using-dynamic-templates
 
 Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU
 
+starting meteor:
+
+meteor --settings settings.json
+
+<<<<<<< HEAD
 commands to know:
 git status //checks the status of the repo
 git branch //shows what branch you are on
@@ -25,3 +33,6 @@ git add . //adds all the new files
 git commit -m"<message>" //puts a message to your commit
 git checkout -b <branch> //changes to branch
 git push origin <branch> //pushes to branch
+=======
+*read through the slingshot doc on atmosherejs
+>>>>>>> e99d913887b86133c18feea6b831c1b9932d7e5b
