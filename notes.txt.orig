@@ -18,13 +18,8 @@ Dynamic templates: https://themeteorchef.com/tutorials/using-dynamic-templates
 Google API Key: AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU
 
 <<<<<<< HEAD
-starting meteor:
-
-meteor --settings settings.json
-
-<<<<<<< HEAD
+*read through the slingshot doc on atmosherejs
 =======
->>>>>>> 6d98c0077ddd9524d47beb354dc42fe4e3b25d15
 commands to know:
 git status //checks the status of the repo
 git branch //shows what branch you are on
@@ -36,9 +31,4 @@ git add . //adds all the new files
 git commit -m"<message>" //puts a message to your commit
 git checkout -b <branch> //changes to branch
 git push origin <branch> //pushes to branch
-<<<<<<< HEAD
-=======
-*read through the slingshot doc on atmosherejs
->>>>>>> e99d913887b86133c18feea6b831c1b9932d7e5b
-=======
->>>>>>> 6d98c0077ddd9524d47beb354dc42fe4e3b25d15
+>>>>>>> f60851ad0d29ae0e97140996821dda98c94f9a5a
