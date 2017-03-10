@@ -2,6 +2,9 @@ var images = Images.find().fetch();
 var videos = Videos.find().fetch();
 var pdf = Pdfs.find().fetch();
 
+var name,Latitude,Longitude,desc;
+var update = false;
+
 Template.pinEdit.helpers({
   pin: function(){
     return Pins.findOne({_id: Session.get("pin-id")});
@@ -18,9 +21,9 @@ Template.pinEdit.helpers({
   numOfVideos: function(){
     return Videos.find().count();
   },
-  'videos': function(){
-    return videos.find();
-  },
+  // 'videos': function(){
+  //   return videos.find();
+  // },
   numOfPdf: function(){
     return Pdfs.find().count();
   },
@@ -32,19 +35,32 @@ Template.pinEdit.helpers({
 Template.pinEdit.events({
   'click .submit': function(e){
     e.preventDefault();
-    var name = $('[name=name]').val();
-    var Latitude = $('[Latitude=Latitude]').val();
-    var Longitude = $('[Longitude=Longitude]').val();
-    var desc = $('[desc=desc]').val();
-    Pins.update(Session.get("pin-id"),{
-      $set:{
-      name: name,
-      Latitude: Latitude,
-      Longitude: Longitude,
-      desc: desc,
-    }});
+    Latitude = $('[name=Latitude]').val();
+    Longitude = $('[name=Longitude]').val();
+    desc = $('[name=desc]').val();
+    update = true;
   },
   'click .back': function(){
     Session.set("pinsTemplate","pinDashboard");
   }
-})
+});
+
+if(Meteor.isServer){
+  if(update){
+    Pins.update({_id: Session.get("pin-id")},{
+      $set:{
+      name: name,
+      Latitude: Latitude,
+      Longitude: Longitude,
+      desc: desc
+    }},
+    function(error, affectedDocs) {
+          if (error) {
+              throw new Meteor.Error(500, error.message);
+          } else {
+              return "Update Successful";
+          }}
+    );
+
+  }
+}

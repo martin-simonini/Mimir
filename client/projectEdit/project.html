@@ -9,7 +9,7 @@ Purpose: Acts as a container for the project editing page. This file collects al
   <h1 class="name">{{p.name}}</h1>
   <div class="project-container">
     <div class="map_container">
-        {{> map}}
+      {{> Template.dynamic template=mapTemplate }}
     </div>
     <div class="edit_container">
       {{> Template.dynamic template=pinsTemplate }}

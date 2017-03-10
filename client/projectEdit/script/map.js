@@ -2,7 +2,7 @@ import { Template } from 'meteor/templating';
 import '../map.html';
 import './project.js'
 
-var MAP_ZOOM = 14;
+var MAP_ZOOM = 12;
 
 Meteor.startup(function(){
   GoogleMaps.load({key: "AIzaSyBo4kPT_k21FfWdXaUqsME3wqVUn7qhJSU" });
@@ -32,7 +32,8 @@ Template.map.helpers({
 
 Template.map.onCreated(function(){
   GoogleMaps.ready('map',function(map){
-    var markers = Pins.find().fetch();
+    var id = FlowRouter.getParam("id");
+    var markers = Pins.find({project_id: id}).fetch();
     for(let i = 0; i<markers.length;i++){
       var pin = new google.maps.Marker({
         position: new google.maps.LatLng(markers[i].Latitude,markers[i].Longitude),

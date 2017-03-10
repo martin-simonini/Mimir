@@ -22,3 +22,8 @@ ul{
 h1{
   text-align: center;
 }
+
+.deleteProject{
+  margin-left: 20%;
+  font-size: 2em;
+}

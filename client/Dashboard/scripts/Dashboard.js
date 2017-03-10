@@ -10,3 +10,9 @@ Template.Dashboard.helpers({
     return Projects.find({});
   }
 });
+
+Template.Dashboard.events({
+  'click .deleteProject': function(){
+    Projects.remove(this._id);
+  }
+})

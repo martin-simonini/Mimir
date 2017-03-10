@@ -1,0 +1,15 @@
+This is a list of all the things that still need to get done on the website:
+
+*Get the styles to work on Google (for the login page)
+*Add facebook and google login/register functionality
+*click and drag for pin creation
+*labels for the pin creation
+*header for pin creation isn't a different color
+*cancel and "create pin" header should be horizontally aligned
+*S3 server info has to be personalized
+*Submit button should be lower
+*Video playback
+*add audio clip support
+*PDF playback
+*Logout button
+*Pin Edit submit doesn't work

@@ -25,3 +25,10 @@ git add . //adds all the new files
 git commit -m"<message>" //puts a message to your commit
 git checkout -b <branch> //changes to branch
 git push origin <branch> //pushes to branch
+
+name change:
+* change the names from tours/projects to routes
+* have "beer routes" for local breweries or "n24th st route"
+* Look at world herald and for activties that can be incorporated
+* Look at athletic events and all the runs and hikes around the city
+* Look at it from an entertainment standpoint. when someone ask "what should I do this weekend?" they will look at our app

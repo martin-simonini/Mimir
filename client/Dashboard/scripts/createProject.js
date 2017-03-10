@@ -1,6 +1,11 @@
-AutoForm.addHooks(['createProject'], {
-  onSuccess: function() {
-    FlashMessages.sendSuccess('Success!');
-    FlowRouter.route("/dashboard");
+var hooksObject = {
+  after: {
+    insert: function(){
+      FlowRouter.go("Dashboard");
+    }
   }
+}
+
+AutoForm.hooks({
+  createProjectForm: hooksObject
 });
